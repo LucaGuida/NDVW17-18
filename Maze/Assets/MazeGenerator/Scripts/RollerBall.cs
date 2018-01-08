@@ -36,10 +36,10 @@ public class RollerBall : MonoBehaviour {
 	void FixedUpdate () {
         
         if (MazeSpawner.getNumberOfCoins()==0) {
-        	GameObject.Find("/Canvas/Coins").GetComponent<Text>().text = "You have collected all the coins: THE GAME IS OVER!";
+        	GameObject.Find("/AlbinoDragon/Canvas/Coins").GetComponent<Text>().text = "You have collected all the coins: THE GAME IS OVER!";
         }
 
-        GameObject.Find("/Canvas/Coins").GetComponent<Text>().text = "You still have to find " + MazeSpawner.getNumberOfCoins() + " coins!";
+        GameObject.Find("/AlbinoDragon/Canvas/Coins").GetComponent<Text>().text = MazeSpawner.getNumberOfCoins() + " coins left";
 
         if (mRigidBody != null) {
 			
